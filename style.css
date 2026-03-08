@@ -376,6 +376,7 @@ img{ display:block; }
 /* =========================
    Benefit section
 ========================= */
+
 .benefit-section{
   padding:18px 14px 0;
   background:#F7F8FA;
@@ -398,7 +399,6 @@ img{ display:block; }
 
 .benefit-card{
   position:relative;
-  display:block;
   height:90px;
   padding:10px 12px;
   border-radius:14px;
@@ -406,13 +406,12 @@ img{ display:block; }
   overflow:hidden;
   text-decoration:none;
   color:#111;
-  background:#fff;
 }
 
 .benefit-copy{
   position:relative;
-  z-index:1;
-  max-width:calc(100% - 52px);
+  z-index:2;
+  max-width:calc(100% - 48px);
 }
 
 .benefit-title{
@@ -441,18 +440,17 @@ img{ display:block; }
   position:absolute;
   right:12px;
   bottom:8px;
-  width:27px;
-  height:27px;
+  width:28px;
+  height:28px;
   object-fit:contain;
-  z-index:1;
+  z-index:2;
 }
 
-/* 1번 카드: 카드 전체 배경 이미지를 CSS로 처리 */
+/* 카드 배경 */
+
 .benefit-card--pink{
-  border-color:#d9c2cb;
-  background:
-    url("https://framerusercontent.com/images/F44KGdM5wK0dbICGRiWkWutixI.png?width=160&height=86")
-    center / cover no-repeat;
+  background:#FAF1F4;
+  border-color:#D9C2CB;
 }
 
 .benefit-card--yellow{
@@ -470,37 +468,50 @@ img{ display:block; }
   border-color:#C7D3E2;
 }
 
-.benefit-card--yellow::before,
-.benefit-card--green::before,
-.benefit-card--blue::before,
-.benefit-card--yellow::after,
-.benefit-card--green::after,
-.benefit-card--blue::after{
+/* 원형 장식 */
+
+.benefit-card::before,
+.benefit-card::after{
   content:"";
   position:absolute;
   border-radius:999px;
   pointer-events:none;
 }
 
-.benefit-card--yellow::before,
-.benefit-card--green::before,
-.benefit-card--blue::before{
-  width:88px;
-  height:88px;
-  right:-18px;
-  bottom:-26px;
+.benefit-card::before{
+  width:90px;
+  height:90px;
+  right:-20px;
+  bottom:-30px;
   background:rgba(255,255,255,0.26);
 }
 
-.benefit-card--yellow::after,
-.benefit-card--green::after,
-.benefit-card--blue::after{
+.benefit-card::after{
   width:60px;
   height:60px;
-  right:12px;
-  bottom:-6px;
-  background:rgba(255,255,255,0.14);
+  right:10px;
+  bottom:-8px;
+  background:rgba(255,255,255,0.16);
 }
+
+/* pink 카드 패턴 */
+
+.benefit-card--pink::before{
+  left:-20px;
+  top:-40px;
+  right:auto;
+  bottom:auto;
+  width:100px;
+  height:100px;
+  background:rgba(255,255,255,0.28);
+}
+
+.benefit-card--pink::after{
+  right:-10px;
+  bottom:-15px;
+}
+
+/* more */
 
 .benefit-more-wrap{
   text-align:center;
@@ -522,8 +533,7 @@ img{ display:block; }
   width:16px;
   height:16px;
   display:block;
-  flex:0 0 16px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23222' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.5 2.5H13.5V6.5'/%3E%3Cpath d='M13.5 2.5L7.5 8.5'/%3E%3Cpath d='M13.5 9.5V13.5H2.5V2.5H6.5'/%3E%3C/svg%3E") center / 16px 16px no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23222' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.5 2.5H13.5V6.5'/%3E%3Cpath d='M13.5 2.5L7.5 8.5'/%3E%3Cpath d='M13.5 9.5V13.5H2.5V2.5H6.5'/%3E%3C/svg%3E") center/16px no-repeat;
 }
 /* =========================
    Channel section
@@ -736,6 +746,7 @@ img{ display:block; }
 .i-doc::before{ content:"📄"; }
 
 .i-gift::before{ content:"🎁"; }
+
 
 
 
