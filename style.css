@@ -510,7 +510,65 @@ img{ display:block; }
   right:-10px;
   bottom:-15px;
 }
+/* =========================
+   3번 카드 전용 보정
+========================= */
 
+.benefit-card--green-fixed{
+  background:#edf4ef;
+  border-color:#c7dad0;
+}
+
+.benefit-card--green-fixed .benefit-copy{
+  position:relative;
+  z-index:2;
+  max-width:calc(100% - 34px);
+}
+
+.benefit-card--green-fixed .benefit-title{
+  white-space:nowrap;
+  overflow:visible;
+  text-overflow:clip;
+  letter-spacing:-0.045em;
+}
+
+.benefit-card--green-fixed .benefit-desc{
+  letter-spacing:-0.04em;
+}
+
+.benefit-card--green-fixed::before,
+.benefit-card--green-fixed::after{
+  content:"";
+  position:absolute;
+  border-radius:999px;
+  pointer-events:none;
+}
+
+.benefit-card--green-fixed::before{
+  width:118px;
+  height:118px;
+  left:-34px;
+  top:-34px;
+  background:rgba(255,255,255,0.18);
+}
+
+.benefit-card--green-fixed::after{
+  width:82px;
+  height:82px;
+  right:-10px;
+  bottom:-18px;
+  background:rgba(255,255,255,0.20);
+}
+
+.benefit-icon--green-fixed{
+  position:absolute;
+  right:10px;
+  bottom:7px;
+  width:26px;
+  height:26px;
+  object-fit:contain;
+  z-index:2;
+}
 /* more */
 
 .benefit-more-wrap{
@@ -746,6 +804,7 @@ img{ display:block; }
 .i-doc::before{ content:"📄"; }
 
 .i-gift::before{ content:"🎁"; }
+
 
 
 
