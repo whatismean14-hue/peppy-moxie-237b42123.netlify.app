@@ -465,22 +465,23 @@ img{ display:block; }
 }
 
 .benefit-card--green-fixed{
-  background:#EDF5F0;
+  background:#EEF6F1;
   border-color:#C8DBD1;
 }
 
-/* 공통 원형 장식 */
-
-.benefit-card::before,
-.benefit-card::after{
+/* 공통 원형 장식: 노랑/파랑 전용 */
+.benefit-card--yellow::before,
+.benefit-card--yellow::after,
+.benefit-card--blue::before,
+.benefit-card--blue::after{
   content:"";
   position:absolute;
   border-radius:999px;
   pointer-events:none;
 }
 
-/* 기본 카드(노랑/파랑) */
-.benefit-card::before{
+.benefit-card--yellow::before,
+.benefit-card--blue::before{
   width:92px;
   height:92px;
   right:-18px;
@@ -488,7 +489,8 @@ img{ display:block; }
   background:rgba(255,255,255,0.34);
 }
 
-.benefit-card::after{
+.benefit-card--yellow::after,
+.benefit-card--blue::after{
   width:62px;
   height:62px;
   right:10px;
@@ -496,30 +498,28 @@ img{ display:block; }
   background:rgba(255,255,255,0.22);
 }
 
-/* pink 카드 */
-.benefit-card--pink .benefit-copy{
-  max-width:calc(100% - 48px);
+/* pink 카드: 아래 흰 원 제거, 좌상단만 강조 */
+.benefit-card--pink::before,
+.benefit-card--pink::after{
+  content:"";
+  position:absolute;
+  border-radius:999px;
+  pointer-events:none;
 }
 
 .benefit-card--pink::before{
   left:-16px;
   top:-34px;
-  right:auto;
-  bottom:auto;
   width:96px;
   height:96px;
   background:rgba(255,255,255,0.46);
 }
 
 .benefit-card--pink::after{
-  right:-8px;
-  bottom:-14px;
-  width:76px;
-  height:76px;
-  background:rgba(255,255,255,0.28);
+  display:none;
 }
 
-/* green 카드 전용 */
+/* green 카드 전용: 원본처럼 좌상단 큰 원 + 우하단 작은 원 */
 .benefit-card--green-fixed .benefit-copy{
   max-width:calc(100% - 34px);
 }
@@ -535,22 +535,28 @@ img{ display:block; }
   letter-spacing:-0.04em;
 }
 
+.benefit-card--green-fixed::before,
+.benefit-card--green-fixed::after{
+  content:"";
+  position:absolute;
+  border-radius:999px;
+  pointer-events:none;
+}
+
 .benefit-card--green-fixed::before{
-  width:116px;
-  height:116px;
-  left:-30px;
-  top:-30px;
-  right:auto;
-  bottom:auto;
-  background:rgba(255,255,255,0.30);
+  left:-20px;
+  top:-26px;
+  width:108px;
+  height:108px;
+  background:rgba(255,255,255,0.34);
 }
 
 .benefit-card--green-fixed::after{
-  width:84px;
-  height:84px;
-  right:-8px;
-  bottom:-16px;
-  background:rgba(255,255,255,0.24);
+  right:-6px;
+  bottom:-18px;
+  width:78px;
+  height:78px;
+  background:rgba(255,255,255,0.18);
 }
 
 .benefit-icon--green-fixed{
@@ -795,6 +801,7 @@ img{ display:block; }
 .i-doc::before{ content:"📄"; }
 
 .i-gift::before{ content:"🎁"; }
+
 
 
 
