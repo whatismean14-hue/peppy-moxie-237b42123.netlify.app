@@ -378,7 +378,7 @@ img{ display:block; }
 ========================= */
 
 .benefit-section{
-  padding:18px 14px 0;
+  padding:18px 16px 0;
   background:#F7F8FA;
 }
 
@@ -394,7 +394,8 @@ img{ display:block; }
 .benefit-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:12px;
+  column-gap:14px;
+  row-gap:12px;
 }
 
 .benefit-card{
@@ -449,23 +450,23 @@ img{ display:block; }
 /* 카드 배경 */
 
 .benefit-card--pink{
-  background:#FAF1F4;
-  border-color:#D9C2CB;
+  background:#FBEFF2;
+  border-color:#D8C3CB;
 }
 
 .benefit-card--yellow{
-  background:#F7EED8;
-  border-color:#DCCB98;
+  background:#F8EFD9;
+  border-color:#DDCC9B;
 }
 
 .benefit-card--blue{
-  background:#EEF2F7;
-  border-color:#C7D3E2;
+  background:#EEF3F9;
+  border-color:#C8D5E4;
 }
 
 .benefit-card--green-fixed{
-  background:#EDF4EF;
-  border-color:#C7DAD0;
+  background:#EDF5F0;
+  border-color:#C8DBD1;
 }
 
 /* 공통 원형 장식 */
@@ -478,41 +479,47 @@ img{ display:block; }
   pointer-events:none;
 }
 
+/* 기본 카드(노랑/파랑) */
 .benefit-card::before{
-  width:90px;
-  height:90px;
-  right:-20px;
-  bottom:-30px;
-  background:rgba(255,255,255,0.26);
+  width:92px;
+  height:92px;
+  right:-18px;
+  bottom:-28px;
+  background:rgba(255,255,255,0.34);
 }
 
 .benefit-card::after{
-  width:60px;
-  height:60px;
+  width:62px;
+  height:62px;
   right:10px;
   bottom:-8px;
-  background:rgba(255,255,255,0.16);
+  background:rgba(255,255,255,0.22);
 }
 
 /* pink 카드 */
+.benefit-card--pink .benefit-copy{
+  max-width:calc(100% - 48px);
+}
 
 .benefit-card--pink::before{
-  left:-20px;
-  top:-40px;
+  left:-16px;
+  top:-34px;
   right:auto;
   bottom:auto;
-  width:100px;
-  height:100px;
-  background:rgba(255,255,255,0.28);
+  width:96px;
+  height:96px;
+  background:rgba(255,255,255,0.46);
 }
 
 .benefit-card--pink::after{
-  right:-10px;
-  bottom:-15px;
+  right:-8px;
+  bottom:-14px;
+  width:76px;
+  height:76px;
+  background:rgba(255,255,255,0.28);
 }
 
 /* green 카드 전용 */
-
 .benefit-card--green-fixed .benefit-copy{
   max-width:calc(100% - 34px);
 }
@@ -529,21 +536,21 @@ img{ display:block; }
 }
 
 .benefit-card--green-fixed::before{
-  width:118px;
-  height:118px;
-  left:-34px;
-  top:-34px;
+  width:116px;
+  height:116px;
+  left:-30px;
+  top:-30px;
   right:auto;
   bottom:auto;
-  background:rgba(255,255,255,0.18);
+  background:rgba(255,255,255,0.30);
 }
 
 .benefit-card--green-fixed::after{
-  width:82px;
-  height:82px;
-  right:-10px;
-  bottom:-18px;
-  background:rgba(255,255,255,0.20);
+  width:84px;
+  height:84px;
+  right:-8px;
+  bottom:-16px;
+  background:rgba(255,255,255,0.24);
 }
 
 .benefit-icon--green-fixed{
@@ -788,6 +795,7 @@ img{ display:block; }
 .i-doc::before{ content:"📄"; }
 
 .i-gift::before{ content:"🎁"; }
+
 
 
 
